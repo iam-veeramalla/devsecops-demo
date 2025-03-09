@@ -1,5 +1,6 @@
 # Build stage
 FROM node:20-alpine AS build
+#Create the work directory /app
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
