@@ -9,7 +9,7 @@ interface SquareProps {
 const Square: React.FC<SquareProps> = ({ value, onClick, isWinningSquare }) => {
   const baseClasses = "w-full h-20 text-4xl font-bold flex items-center justify-center rounded-md transition-all duration-200";
   
-  // Different styling based on value and winning status
+  // Apply different classes based on winning state
   const getSquareClasses = () => {
     if (isWinningSquare) {
       return `${baseClasses} bg-green-200 text-green-800 border-2 border-green-500`;
