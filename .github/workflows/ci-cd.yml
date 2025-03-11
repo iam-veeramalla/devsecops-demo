@@ -80,6 +80,7 @@ jobs:
     env:
       REGISTRY: ghcr.io
       IMAGE_NAME: ${{ github.repository }}
+      TRIVY_DISABLE_VEX_NOTICE: true
     outputs:
       image_tag: ${{ steps.set_output.outputs.image_tag }}
     steps:
