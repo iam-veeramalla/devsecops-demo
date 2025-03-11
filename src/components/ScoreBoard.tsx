@@ -29,7 +29,7 @@ const ScoreBoard: React.FC<ScoreBoardProps> = ({ scores }) => {
         <div className="flex justify-between items-center p-2 bg-purple-50 rounded">
           <div className="flex items-center gap-2">
             <User className="h-4 w-4 text-purple-600" />
-            <span className="font-medium">Banwar Singh Shikawath</span>
+            <span className="font-medium">Shikawath</span>
           </div>
           <span className="text-lg font-bold text-purple-600">{scores.O}</span>
         </div>
