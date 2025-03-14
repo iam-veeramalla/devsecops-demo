@@ -1,5 +1,5 @@
 # Build stage
-FROM node:20-alpine AS build
+FROM public.ecr.aws/docker/library/node:iron-bookworm AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
