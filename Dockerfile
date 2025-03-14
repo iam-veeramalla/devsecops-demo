@@ -1,5 +1,5 @@
 # Build stage
-FROM public.ecr.aws/docker/library/node:iron-bookworm AS build
+FROM node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build
 
 # Production stage
-FROM nginx:1.27.4-alpine
+FROM nginx:alpine
 RUN apk update && apk upgrade libxml2 --repository=http://dl-cdn.alpinelinux.org/alpine/v3.21/main
 COPY --from=build /app/dist /usr/share/nginx/html
 # Add nginx configuration if needed
