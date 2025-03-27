@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'npm'        #Caching dependencies so it doesn't download pkges try to run or any npm commands
       
       - name: Install dependencies
         run: npm ci
