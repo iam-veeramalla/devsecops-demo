@@ -3,9 +3,8 @@ FROM node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 
-# Install dependencies and fix vulnerabilities
+# Install dependencies
 RUN npm ci
-RUN npm audit fix
 
 COPY . .
 RUN npm run build
