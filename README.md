@@ -86,5 +86,5 @@ npm run build
 yarn build
 ```
 
-The build artifacts will be stored in the `dist/` directory.
+The build artifacts will be  stored in the `dist/` directory.
 
